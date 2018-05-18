@@ -19,17 +19,17 @@
             <template v-if="item.children">
               <!-- First level dropdown -->
               <SidebarNavDropdown :key="index" :name="item.name" :url="item.url" :icon="item.icon">
-                <template v-for="(childL1, index) in item.children">
+                <template v-for="(childL1, index1) in item.children">
                   <template v-if="childL1.children">
                     <!-- Second level dropdown -->
-                    <SidebarNavDropdown :key="index" :name="childL1.name" :url="childL1.url" :icon="childL1.icon">
+                    <SidebarNavDropdown :key="index1" :name="childL1.name" :url="childL1.url" :icon="childL1.icon">
                       <li class="nav-item" :key="index2" v-for="(childL2, index2) in childL1.children">
                         <SidebarNavLink :name="childL2.name" :url="childL2.url" :icon="childL2.icon" :badge="childL2.badge" :variant="item.variant"/>
                       </li>
                     </SidebarNavDropdown>
                   </template>
                   <template v-else>
-                    <SidebarNavItem :key="index" :classes="item.class">
+                    <SidebarNavItem :key="index1" :classes="item.class">
                       <SidebarNavLink :name="childL1.name" :url="childL1.url" :icon="childL1.icon" :badge="childL1.badge" :variant="item.variant"/>
                     </SidebarNavItem>
                   </template>
