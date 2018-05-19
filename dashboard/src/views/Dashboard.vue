@@ -31,7 +31,6 @@ import feedbs from '../_feeds.js'
 import cFeeds from '../components/Feedbacks.vue'
 import cProgres from '../components/Progres.vue'
 
-
 export default {
   name: 'dashboard',
   components: {

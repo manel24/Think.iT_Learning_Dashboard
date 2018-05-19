@@ -1,5 +1,4 @@
 <template >
-    <progres>
     <b-table class="mb-0 table-outline" responsive="sm" hover :items="tableItems" :fields="tableFields"  head-variant="light">
             <div slot="avatar" class="avatar" slot-scope="item">
               <img :src="item.value.url" class="img-avatar" alt="">
@@ -31,7 +30,6 @@
               <strong>{{item.value}}</strong>
             </div>
           </b-table>
-    </progres>
 </template>
 
 <script>
@@ -56,14 +54,14 @@ export default {
     // TODO
     // modify this fx so that it calculates status based on progress % + deadline ==>
     // if out of deadline => outOfDeadline, else : if progress==100% => finished, else=> Inprogress 
-     getBadge (status) {
+    getBadge (status) {
       return status === 'Inprogress' ? 'warning'
         : status === 'finished' ? 'success'
           : status === 'outOfDeadline' ? 'danger'
             : 'primary'
     }
   },
-    props: {
+  props: {
     /*module_id: {
       type: Number,
       default:1 // should be required
