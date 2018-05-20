@@ -16,31 +16,31 @@
         <i class="fa fa-comments"></i> <div ><strong> Fellows Feedbacks</strong></div>
         </div>
      <div role="tablist">
-      <c-feeds :feeds="feeds"/>
+      <c-feeds :feeds="feeds" />
         </div>
        </b-card>
        </b-col>
-       </b-row>  
+       </b-row>
     </div>
 </div>
 </template>
 <script>
 
-import prog from '../_prog.js'
-import feedbs from '../_feeds.js'
-import cFeeds from '../components/Feedbacks.vue'
-import cProgres from '../components/Progres.vue'
+// import prog from '@/_prog.js'
+import feedbs from '@/_feeds.js'
+import cFeeds from '@/components/Feedbacks.vue'
+import cProgres from '@/components/Progres.vue'
 
 export default {
   name: 'dashboard',
   components: {
     cProgres,
     cFeeds
-  },
+      },
   data () {
     return {
-      tableItems: prog.tableItems,
-      tableFields: prog.tableFields,
+      // tableItems: prog.tableItems,
+      // tableFields: prog.tableFields,
       showCollapse: true,
       FELLOWS_NBR: 20,
       feeds: feedbs.feeds
