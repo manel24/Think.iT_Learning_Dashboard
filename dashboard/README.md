@@ -32,6 +32,7 @@ $ yarn build
 - Create pull requests, submit bugs, suggest new features or documentation updates, 
 - Check the TODO part for more details about missing features and improvement 
 > Running the  solution in development mode
+
 ```bash
 $ yarn install
 $ yarn run dev
