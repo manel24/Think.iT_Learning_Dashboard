@@ -10,12 +10,11 @@ This project uses the following technologies:
 ### deploy project
 > Configuration file must be updated
 ```python
-
 CLASSBOT_FELLOWS_URL = 'FELLOWS_DATA _URL'
 CLASSBOT_MODULES_URL = 'MODULES_DATA_URL'
 CLASS_BOT_TOKEN = 'AUTHORIZATION_TOKEN' 
-
 ```
+
 Then run command: 
 ```
 $ chalice deploy
