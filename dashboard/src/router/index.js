@@ -4,8 +4,9 @@ import Router from 'vue-router'
 // Containers
 import Full from '@/containers/Full'
 
-// Views
+// Viimpoews
 import Dashboard from '@/views/Dashboard'
+import Progres from '@/components/Progres'
 
 Vue.use(Router)
 
@@ -21,9 +22,14 @@ export default new Router({
       component: Full,
       children: [
         {
-          path: 'dashboard',
+          path: 'dashboard/',
           name: 'Dashboard',
           component: Dashboard
+        },
+        {
+          path: 'module/:module_id',
+          name: 'Module',
+          component: Progres
         }
 
       ]

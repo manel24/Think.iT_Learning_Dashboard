@@ -15,20 +15,13 @@
   </div>
   </template>
 <script>
-export default {
+export default { 
   name: 'c-feeds',
-  props: {
-    /* module_id: {   //TO ADD
-      type: Number,
-      default:1 //should be required
-    }, */
+  props: {  
     feeds: {
       type: Array
     }
-  /* maxFeeds: {    //TO ADD
-      type: Number,
-      default: this.FELLOWS_NBR //should be var not a const
-    } */
+ 
   }
 }
 </script>
