@@ -1,5 +1,4 @@
 # Dashboard_classbot 2.0
-
 It is a Web Dashboard designed and developed for Think.iT in order to help the learning team affect modules to fellows based on their learning path with lower operational charge. 
 
 # Features:
