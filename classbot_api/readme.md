@@ -19,6 +19,6 @@ Then run command:
 ```
 $ chalice deploy
 ```
-> Your credentials must be updated before running chalice deploy
 ```
+> our credentials must be updated before running chalice deploy
    
