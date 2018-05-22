@@ -27,7 +27,6 @@
 <script>
 
 // import prog from '@/_prog.js'
-import feedbs from '@/_feeds.js'
 import cFeeds from '@/components/Feedbacks.vue'
 import cProgres from '@/components/Progres.vue'
 
@@ -39,10 +38,7 @@ export default {
       },
   data () {
     return {
-      // tableItems: prog.tableItems,
-      // tableFields: prog.tableFields,
       showCollapse: true,
-      FELLOWS_NBR: 20,
       feeds: feedbs.feeds
     }  
   }
