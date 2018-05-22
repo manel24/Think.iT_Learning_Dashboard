@@ -10,9 +10,6 @@ This project uses the following technologies:
 ### deploy project
 > Configuration file must be updated
 ```python
-'''
-    Api main configuration file
-'''
 
 CLASSBOT_FELLOWS_URL = 'FELLOWS_DATA _URL'
 CLASSBOT_MODULES_URL = 'MODULES_DATA_URL'
