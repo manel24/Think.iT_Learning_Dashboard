@@ -1,46 +1,52 @@
 <template>
-   <div class="wrapper">
-        <div class="animated fadeIn">
-     <b-row>
-        <b-col cols='16' md='8'>
-            <b-card>
-            <div slot="header" style="text-align:center">
-        <i class="fa fa-spinner"></i> <div ><strong> Fellows Progress</strong></div>
-        </div>
-           <c-progres/>
-            </b-card>
-       </b-col>
-        <b-col cols="8" md="4">
-          <b-card header-tag="header" footer-tag="footer">
-              <div slot="header" style="text-align:center">
-        <i class="fa fa-comments"></i> <div ><strong> Fellows Feedbacks</strong></div>
-        </div>
-     <div role="tablist">
-      <c-feeds :feeds="feeds" />
-        </div>
-       </b-card>
-       </b-col>
-       </b-row>
-    </div>
-</div>
+  <div class="animated fadeIn">
+    <b-row>
+      <b-col sm="6" lg="3">
+        <b-card>
+          <div class="h4 m-0">{{excelence}}</div>
+          <div>Excelence modules</div>
+
+        </b-card>
+      </b-col>
+        <b-col sm="6" lg="3">
+        <b-card>
+          <div class="h4 m-0">{{technical}}</div>
+          <div>Technical modules</div>
+
+        </b-card>
+      </b-col>
+      <b-col sm="6" lg="3">
+        <b-card>
+          <div class="h4 m-0">{{users}}</div>
+          <div>Fellows</div>
+
+        </b-card>
+      </b-col>
+    </b-row>
+  </div>
 </template>
+
 <script>
-
-// import prog from '@/_prog.js'
-import cFeeds from '@/components/Feedbacks.vue'
-import cProgres from '@/components/Progres.vue'
-
+import api from '@/services/api'
 export default {
-  name: 'dashboard',
-  components: {
-    cProgres,
-    cFeeds
-      },
+  name: 'widgets',
   data () {
     return {
-      showCollapse: true,
-      feeds: feedbs.feeds
-    }  
+      technical : 11,
+      excelence : 4,
+      users: 28,
+      msg: 'Widgets'
+    }
+
+
+  },
+  methods : {
+    loadfellows() {
+
+    }
+  },
+  mounted () {
+    this.loadfellows()
   }
 }
 </script>

@@ -25,6 +25,8 @@ def get_module_fellows(module_id):
     for fellow in json_data:
         status = ''
         card = None
+        progress = 0
+      
         if module_name in json_data[fellow]["done"]:
             status = "finished"
             card = json_data[fellow]['done'][module_name]['card']
@@ -35,10 +37,12 @@ def get_module_fellows(module_id):
             status = "InProgress"
             card = json_data[fellow]['doingExcellence'][module_name]['card']
         if card:
+            if card['badges']['checkItems'] != 0 :
+                progress = (card['badges']['checkItemsChecked'] / card['badges']['checkItems']) * 100
             fellows.append({
                 'avatar': {'url': 'static/img/avatars/1.jpg', 'status': status},
                 'fellow': {'name': fellow},
-                'progress': {'value': (card['badges']['checkItemsChecked'] / card['badges']['checkItems']) * 100},
+                'progress': {'value': progress },
                 'Status': {'value': status},
                 'Deadline': 'Undefined' if  not card['due'] or 'T' not in card['due'] else  card['due'].split("T")[0] 
             })

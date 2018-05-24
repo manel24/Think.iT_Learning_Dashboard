@@ -5,9 +5,7 @@ import requests
 app = Chalice(app_name='classbot_api')
 app.debug = True
 
-@app.route('/',cors=True)
-def index():
-    return utils.do_get_request('https://classbot.think-it.io/users',{'Authorization': 'nhz4lx59tmrj56pxemm4rf9vryw6wupwnh1mf4bs'}) 
+
 
 @app.route('/module/progress', methods=['POST'], cors=True)
 def fellow_modules():
@@ -18,8 +16,11 @@ def fellow_modules():
 def modules():
    return modules_controller.get_all_modules()
 
-@app.route('/fellows', methods=['GET'])
-def create_user():
-    return {'user': ''}
+@app.route('/fellow/{email}', methods=['GET'],cors=True)
+def get_fellow_by_email(email):
+    return fellows_controller.get_fellow(email)
 
+@app.route('/fellows', methods=['GET'],cors=True)
+def get_fellows():
+    return fellows_controller.get_all_fellows()
 

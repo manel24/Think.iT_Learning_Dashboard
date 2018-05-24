@@ -4,24 +4,24 @@
     <SidebarForm/>
     <nav class="sidebar-nav">
       <div slot="header"></div>
-      <ul class="nav">  
+      <ul class="nav">
           <template >
             <sidebar-nav-dropdown :name="'Excellence camp'" :class="''" :icon="'icon-speedometer'" />
-          </template>    
+          </template>
         <template   v-for="(item, index) in navItems">
             <SidebarNavItem v-show="item.excellenceCamp" :key="index" :classes="item.class">
                 <SidebarNavLink :name="item.name" :url="'/module/'+item.ClassroomID" :icon="item.icon" :badge="item.badge" :variant="item.variant"/>
             </SidebarNavItem>
         </template>
-          <template >  
+          <template >
             <sidebar-nav-dropdown  :name="'Technical camp'" :class="''" :icon="'icon-speedometer'"/>
-          </template>    
+          </template>
         <template  v-for="(item, index) in navItems">
             <SidebarNavItem  v-show="!item.excellenceCamp" :key="index" :classes="item.class">
                 <SidebarNavLink  :name="item.name" :url="'/module/'+item.ClassroomID" :icon="item.icon" :badge="item.badge" :variant="item.variant"/>
               </SidebarNavItem>
         </template>
-        
+
       </ul>
       <slot></slot>
     </nav>
@@ -47,8 +47,8 @@ export default {
  data() {
    return {
      navItems : []
- 
-   
+
+
  }},
   components: {
     SidebarFooter,
@@ -72,11 +72,11 @@ export default {
     api().get("modules").then(response => {
       this.navItems=response.data
       console.log(this.navItems)
-    }) 
+    })
 
   }
 
-} 
+}
 </script>
 
 <style scoped lang="css">
